@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Amor</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Página da carta -->
+        <div id="letter-page" class="letter-page">
+            <div class="letter-header">
+                <div class="from-to">De: Izamara</div>
+                <div class="from-to">Para: Chú Soares</div>
+            </div>
+            <div class="letter-envelope" onclick="openLetter()">
+                <div class="envelope-icon">💌</div>
+                <div class="open-text">Abra</div>
+            </div>
+        </div>
+
+        <!-- Página da pergunta -->
+        <div id="question-page" class="question-page">
+            <div class="gif-container">
+                <img src="gif/gif1.gif">
+            </div>
+            <div class="question">Você me ama?</div>
+            <div class="buttons-container">
+                <button class="btn btn-sim" onclick="clickSim()">Sim</button>
+                <button class="btn btn-nao" id="btnNao" onmouseenter="fugirBotao()" ontouchstart="fugirBotao()" onclick="fugirBotao()">Não</button>
+            </div>
+        </div>
+        
+        <!-- Página intermediária -->
+        <div id="intermediate-page" class="question-page gif-container" style="display: none;">
+            <div class="intermediate-gif">
+                <img src="gif/gif3.gif">
+            </div>
+        </div>
+
+        <!-- Página de resposta -->
+        <div id="response-page" class="question-page gif-container">
+            <div class="gif-container">
+            <img src="gif/gif2.gif">
+            <div class="response-text">Eu sabia!❤️😍</div>
+        </div>
+        </div>
+    </div>
+
+    <div class="hearts" id="hearts"></div>
+       <script src="script.js"></script>
+</body>
+</html>
